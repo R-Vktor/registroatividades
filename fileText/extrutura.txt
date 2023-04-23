@@ -1,0 +1,58 @@
+no segundo terminal rodar o seguinte comando para aobrir os projetps de referencia:
+
+cd desktop/main/cursos/cursoudemy/cursotypescript/startdev/projetos/apirestfulltypescript && code . && cd .. && cd breakingNews && code . && cd ..
+
+
+Aquitetura:
+
+- controllers
+- middlewares
+- database
+	+ instancia do banco de dados, mongoose client
+- models:
+	+ schemas de cada mais o model - (dessa forma se for o mongoose)
+
+- routes:
+	+ conterá todas as rotas
+
+- services:
+	+ mensageria
+	- repositorys
+		+ conterá os metodos de manipulacao do mongoose que serao chamandos lá no controller.
+
+- index:
+	+ conterá inicializacao da API.
+
+
+Decidir qual a melhor extrutura de rotas a usar.
+
+	Quando temos propriedades sendo passadas para o constructor da classe, ao invés de setar uma por uma,
+podemos usar o metodo nativo "Object.assign(this, props)", o 'props' vai ser o
+array que vai  conter as propriedades que foram recebidas no parametro do contructor, dessa forma
+todas as propriedades serao inseridas ja com o this.
+	Ná prática temos que passar o 'this' no primeiro parametro, no
+segundo parametro passamos todas a propriedades para um objeto e usamos
+ele para passar como o seguindo parametro o objeto contendo as propridades
+que serao passadas.
+Ex:
+
+export class User {
+	public readonly id: string;
+
+	public name: string;
+	public email: string;
+	public password:nstring;
+
+	constructor(props: Omit<User, 'id'>, id?: string) {
+		Object.assign(this, props);
+
+		......
+	}
+}
+
+
+Desacoplar o controller, ele deve receber o response e devolver o request e fazer a implementacao das funcionalidades que sao providas pelas interfaces.
+
+continuar o projeto no ncontroller criando a funcionalidade de validacao dos campos do corpo da requisicao.
+
+git - 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 - expira 23/05/23
