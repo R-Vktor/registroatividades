@@ -1,4 +1,4 @@
-Projeto feito para conclusao do curso de Typescript do intrutor Rogério Miranda da Udemy.
+Projeto feito para conclusao do curso de Typescript do instrutor Rogério Miranda da Udemy.
 Se trata de uma API feita para registro de filmes e series. 
 
 - Foi feito no padrao Restful
